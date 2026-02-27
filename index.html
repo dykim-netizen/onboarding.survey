@@ -327,7 +327,7 @@
                                         {val!==null?(
                                           <>
                                             <div style={{ fontSize:10, fontWeight:700, color:diff===null?"transparent":diff>0?"#2D5016":diff<0?"#C0392B":"#888", marginBottom:2 }}>
-                                              {diff!==null&&diff!==0?(diff>0?`+${diff.toFixed(1)}`:diff.toFixed(1)):(diff===0?"→":"")}
+                                              {diff!==null&&diff!==0?(diff>0?`+${diff.toFixed(1)}`:diff.toFixed(1)):(diff===0?"→":"‎")}
                                             </div>
                                             <div style={{ width:"100%", background:ROUND_COLOR[rd], borderRadius:"4px 4px 0 0", height:`${(val/5)*36}px`, minHeight:4, position:"relative" }}>
                                               <div style={{ position:"absolute", top:-16, width:"100%", textAlign:"center", fontSize:10, fontWeight:700, color:"#2D5016" }}>{val.toFixed(1)}</div>
