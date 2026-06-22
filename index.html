@@ -316,7 +316,7 @@ function App() {
                                 <tbody>
                                   {Q_LABELS.map((ql,qi)=>(
                                     <tr key={qi} style={{background:qi%2===0?"white":"#F7F4EF"}}>
-                                      <td style={{padding:"9px 12px",fontSize:12,borderBottom:"1px solid #F0EDE6",lineHeight:1.4}}>Q{qi+1}. {ql.slice(0,18)}…</td>
+                                      <td style={{padding:"9px 12px",fontSize:12,borderBottom:"1px solid #F0EDE6",lineHeight:1.4}}>Q{qi+1}. {ql}</td>
                                       {ROUNDS.map(rd=>(
                                         <td key={rd} style={{textAlign:"center",padding:"9px 12px",borderBottom:"1px solid #F0EDE6"}}>
                                           {pdata[rd]?<span style={{fontWeight:700,fontSize:15,color:pdata[rd].scores[qi]>=4?"#2D5016":pdata[rd].scores[qi]===3?"#888":"#C0392B"}}>{pdata[rd].scores[qi]}</span>:<span style={{color:"#ddd"}}>—</span>}
