@@ -78,6 +78,8 @@ function App() {
   async function submitSurvey() {
     if(!name.trim()||!round) return alert("이름과 시점을 입력해주세요!");
     for(let i=0;i<6;i++) if(!scores[i]) return alert(`Q${i+1}번 답변을 선택해주세요!`);
+    if(!text7.trim()) return alert("7번 답변을 입력해주세요!");
+    if(!text8.trim()) return alert("8번 답변을 입력해주세요!");
     setSubmitting(true);
     try {
       const params = new URLSearchParams({
@@ -222,11 +224,11 @@ function App() {
             <div style={s.secTitle}>💬 건의사항 & 자유 의견</div>
             <div style={s.card}>
               <div style={s.qLabel}><span style={s.qNum}>7</span><span>온보딩 과정에서 아쉬웠거나 개선되었으면 하는 점이 있다면 적어주세요.</span></div>
-              <textarea style={s.textarea} placeholder="없으면 '없음'으로 작성해주세요" value={text7} onChange={e=>setText7(e.target.value)}/>
+              <textarea style={s.textarea} placeholder="" value={text7} onChange={e=>setText7(e.target.value)}/>
             </div>
             <div style={s.card}>
               <div style={s.qLabel}><span style={s.qNum}>8</span><span>피플팀 또는 회사에 전달하고 싶은 이야기가 있다면 편하게 적어주세요.</span></div>
-              <textarea style={s.textarea} placeholder="없으면 '없음'으로 작성해주세요" value={text8} onChange={e=>setText8(e.target.value)}/>
+              <textarea style={s.textarea} placeholder="" value={text8} onChange={e=>setText8(e.target.value)}/>
             </div>
           </div>
           <button style={s.submitBtn} onClick={submitting?undefined:submitSurvey} disabled={submitting}>
